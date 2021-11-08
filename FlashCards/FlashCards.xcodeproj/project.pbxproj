@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E9D9981627397AA90023F123 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D9981527397AA90023F123 /* AppDelegate.swift */; };
 		E9D9981827397AA90023F123 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D9981727397AA90023F123 /* SceneDelegate.swift */; };
-		E9D9981A27397AA90023F123 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D9981927397AA90023F123 /* ViewController.swift */; };
 		E9D9981D27397AA90023F123 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D9981B27397AA90023F123 /* Main.storyboard */; };
 		E9D9981F27397AAB0023F123 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9D9981E27397AAB0023F123 /* Assets.xcassets */; };
 		E9D9982227397AAB0023F123 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D9982027397AAB0023F123 /* LaunchScreen.storyboard */; };
@@ -22,6 +21,9 @@
 		E9D998542739817E0023F123 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E9D998532739817E0023F123 /* FirebaseDatabase */; };
 		E9D998562739817E0023F123 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E9D998552739817E0023F123 /* FirebaseFirestore */; };
 		E9D998582739817E0023F123 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = E9D998572739817E0023F123 /* FirebaseRemoteConfig */; };
+		E9D9985A2739845C0023F123 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D998592739845C0023F123 /* Auth.storyboard */; };
+		E9D9985F273985190023F123 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D9985E273985190023F123 /* AuthViewController.swift */; };
+		E9D99861273986200023F123 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D99860273986200023F123 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +47,6 @@
 		E9D9981227397AA90023F123 /* FlashCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D9981527397AA90023F123 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9D9981727397AA90023F123 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9D9981927397AA90023F123 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E9D9981C27397AA90023F123 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9D9981E27397AAB0023F123 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9D9982127397AAB0023F123 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +57,9 @@
 		E9D9983627397AAC0023F123 /* FlashCardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsUITests.swift; sourceTree = "<group>"; };
 		E9D9983827397AAC0023F123 /* FlashCardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E9D9984C273980530023F123 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E9D998592739845C0023F123 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		E9D9985E273985190023F123 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		E9D99860273986200023F123 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +181,7 @@
 		E9D9984927397B340023F123 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E9D9981927397AA90023F123 /* ViewController.swift */,
+				E9D9985B273984D70023F123 /* Auth */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -185,6 +189,7 @@
 		E9D9984A27397B510023F123 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				E9D99860273986200023F123 /* Coordinator.swift */,
 			);
 			name = Coordinators;
 			sourceTree = "<group>";
@@ -192,8 +197,17 @@
 		E9D9984B27397B6B0023F123 /* Story Boards */ = {
 			isa = PBXGroup;
 			children = (
+				E9D998592739845C0023F123 /* Auth.storyboard */,
 			);
 			name = "Story Boards";
+			sourceTree = "<group>";
+		};
+		E9D9985B273984D70023F123 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E9D9985E273985190023F123 /* AuthViewController.swift */,
+			);
+			name = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +326,7 @@
 			files = (
 				E9D9982227397AAB0023F123 /* LaunchScreen.storyboard in Resources */,
 				E9D9984D273980530023F123 /* GoogleService-Info.plist in Resources */,
+				E9D9985A2739845C0023F123 /* Auth.storyboard in Resources */,
 				E9D9981F27397AAB0023F123 /* Assets.xcassets in Resources */,
 				E9D9981D27397AA90023F123 /* Main.storyboard in Resources */,
 			);
@@ -338,7 +353,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9D9981A27397AA90023F123 /* ViewController.swift in Sources */,
+				E9D9985F273985190023F123 /* AuthViewController.swift in Sources */,
+				E9D99861273986200023F123 /* Coordinator.swift in Sources */,
 				E9D9981627397AA90023F123 /* AppDelegate.swift in Sources */,
 				E9D9981827397AA90023F123 /* SceneDelegate.swift in Sources */,
 			);
