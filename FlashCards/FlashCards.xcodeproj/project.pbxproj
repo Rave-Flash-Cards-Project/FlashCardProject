@@ -12,6 +12,9 @@
 		501A697427399D5400E1172F /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A697327399D5400E1172F /* AccountViewController.swift */; };
 		501A697627399D7800E1172F /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A697527399D7800E1172F /* CreateViewController.swift */; };
 		501A697827399D8E00E1172F /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501A697727399D8E00E1172F /* CardsViewController.swift */; };
+		E90BCE23273AE7C900DEF6B1 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90BCE22273AE7C900DEF6B1 /* Card.swift */; };
+		E9CECB152739AF74007A6CD9 /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CECB142739AF74007A6CD9 /* Ref.swift */; };
+		E9CECB172739E32B007A6CD9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CECB162739E32B007A6CD9 /* User.swift */; };
 		E9D9981627397AA90023F123 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D9981527397AA90023F123 /* AppDelegate.swift */; };
 		E9D9981827397AA90023F123 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D9981727397AA90023F123 /* SceneDelegate.swift */; };
 		E9D9981D27397AA90023F123 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D9981B27397AA90023F123 /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 		501A697327399D5400E1172F /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		501A697527399D7800E1172F /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		501A697727399D8E00E1172F /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		E90BCE22273AE7C900DEF6B1 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		E9CECB142739AF74007A6CD9 /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
+		E9CECB162739E32B007A6CD9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E9D9981227397AA90023F123 /* FlashCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D9981527397AA90023F123 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9D9981727397AA90023F123 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E9CECB132739AF4F007A6CD9 /* Network and Storage */ = {
+			isa = PBXGroup;
+			children = (
+				E9CECB142739AF74007A6CD9 /* Ref.swift */,
+			);
+			name = "Network and Storage";
+			sourceTree = "<group>";
+		};
 		E9D9980927397AA90023F123 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +139,7 @@
 		E9D9981427397AA90023F123 /* FlashCards */ = {
 			isa = PBXGroup;
 			children = (
+				E9CECB132739AF4F007A6CD9 /* Network and Storage */,
 				E9D9984C273980530023F123 /* GoogleService-Info.plist */,
 				E9D9984B27397B6B0023F123 /* Story Boards */,
 				E9D9984A27397B510023F123 /* Coordinators */,
@@ -169,6 +184,8 @@
 		E9D9984627397B1B0023F123 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E9CECB162739E32B007A6CD9 /* User.swift */,
+				E90BCE22273AE7C900DEF6B1 /* Card.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -377,6 +394,9 @@
 				E9D9981627397AA90023F123 /* AppDelegate.swift in Sources */,
 				501A697127399B5500E1172F /* FlashcardCell.swift in Sources */,
 				E9D9981827397AA90023F123 /* SceneDelegate.swift in Sources */,
+				E9CECB172739E32B007A6CD9 /* User.swift in Sources */,
+				E9CECB152739AF74007A6CD9 /* Ref.swift in Sources */,
+				E90BCE23273AE7C900DEF6B1 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
