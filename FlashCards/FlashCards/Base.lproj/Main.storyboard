@@ -5,23 +5,24 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Account-->
         <scene sceneID="lKo-5B-NEP">
             <objects>
-                <viewController storyboardIdentifier="AccountController" id="rGI-b8-uE5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountController" id="rGI-b8-uE5" customClass="AccountViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" id="Z6m-BA-9Zm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6j-Ud-8w9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="104" y="-27"/>
+            <point key="canvasLocation" x="-288" y="97"/>
         </scene>
         <!--Create-->
         <scene sceneID="N9v-BV-qkK">
             <objects>
-                <viewController storyboardIdentifier="CreateController" id="5BL-n5-uS6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateController" id="5BL-n5-uS6" customClass="CreateViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ux4-UX-O9D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,23 +33,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1uP-fu-gBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-855" y="253"/>
+            <point key="canvasLocation" x="-1255" y="86"/>
         </scene>
         <!--Cards-->
         <scene sceneID="UaY-FG-5jC">
             <objects>
-                <viewController storyboardIdentifier="FlashcardsController" id="wRI-uU-VYR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlashcardsController" id="wRI-uU-VYR" customClass="CardsViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k7x-ea-Gfq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2MY-oH-A6n">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Sd-b2-6nj">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fre-to-N7g">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cmn-BK-gPi">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vrn-vg-XEu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2MY-oH-A6n" firstAttribute="top" secondItem="vrn-vg-XEu" secondAttribute="top" id="Alr-nU-hh3"/>
+                            <constraint firstItem="vrn-vg-XEu" firstAttribute="bottom" secondItem="2MY-oH-A6n" secondAttribute="bottom" id="CJq-0M-86F"/>
+                            <constraint firstItem="vrn-vg-XEu" firstAttribute="trailing" secondItem="2MY-oH-A6n" secondAttribute="trailing" id="UyP-8f-Xlo"/>
+                            <constraint firstItem="2MY-oH-A6n" firstAttribute="leading" secondItem="vrn-vg-XEu" secondAttribute="leading" id="XvX-Lm-hV1"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cards" id="UPt-we-HSm"/>
+                    <connections>
+                        <outlet property="myCollectionView" destination="2MY-oH-A6n" id="oni-hi-UGu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0HQ-Jt-GGL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="104" y="-634"/>
+            <point key="canvasLocation" x="-46" y="-698"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sL8-ZG-Boh">
