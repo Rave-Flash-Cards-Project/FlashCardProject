@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FirebaseAuth
+
 
 protocol AuthControllerDelegate {
     func  done()
@@ -17,6 +17,7 @@ class AuthViewController: UIViewController {
     //MARK: - PROPERTIES
     
     var delegate: AuthControllerDelegate?
+    var viewModel = AuthViewModel()
     //MARK: - OUTLETS
     
     @IBOutlet weak var userNameLabel: UILabel!
@@ -50,28 +51,29 @@ class AuthViewController: UIViewController {
     //MARK: - ACTIONS & HELPERS
     
     func validateFields() {
-        guard let userName = userNameLabel.text, !userName.isEmpty, user.isValid(.) else {
+        guard let userName = userNameTextField.text, !userName.isEmpty else {
             warningLabel.isHidden = false
             warningLabel.text = "Please enter a valid user name"
             return
         }
         
-        guard let email = passwordLabel.text, !email.isEmpty else {
+        guard let email = passwordTextField.text, !email.isEmpty else {
             warningLabel.isHidden = false
             warningLabel.text = "Please enter a valid email address"
+            return
         }
+        
+        viewModel.signUp(withUsername: userName, email: email) {
+            UserAPI.shared.currentUserId
+        } _: { (errorMessage) in
+            print(errorMessage)
+        }
+
     }
-    
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   
+    
+    @IBAction func createUserButtonTapped(_ sender: Any) {
+        self.validateFields()
     }
-    */
-
 }

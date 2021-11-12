@@ -9,6 +9,10 @@ import Foundation
 import Firebase
 
 let REF_User = "users"
+let UID = "uid"
+let EMAIL = "email"
+let USERNAME = "userName"
+let CARDS = "CARDS"
 
 class Ref {
     
